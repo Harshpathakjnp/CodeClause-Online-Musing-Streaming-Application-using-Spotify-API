@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>first page</title>
+</head>
+<body>
+<!--{{albums}}-->
+first page <br><br>
+<table border="5">
+    <tr>
+        <th>album type</th>
+        <th>external url</th>
+        <th>artists link</th>
+        <th>artists name</th>
+        <th>artists uri</th>
+        <th>song</th>
+        <th>image</th>
+    </tr>
+    <tr>
+        <td>{{albums.album_type}}</td>
+        <td><a href="{{albums.artists.0.external_urls.spotify}}" target="_blank">external url</a></td>
+        <td><a href="{{albums.artists.0.href}}" target="_blank">artist link</a></td>
+        <td>{{albums.artists.0.name}}</td>
+        <td><a href="{{albums.artists.0.uri}}" target="_blank">uri</a></td>
+        <td><a href="{{albums.external_urls.spotify}}" target="_blank">spotify</a></td>
+        <td><img src="{{albums.images.0.url}}" alt=""></td>
+
+
+
+    </tr>
+
+</table>
+</body>
+</html>
